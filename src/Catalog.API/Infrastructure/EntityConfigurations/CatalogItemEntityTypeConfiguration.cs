@@ -20,5 +20,8 @@ class CatalogItemEntityTypeConfiguration
             .WithMany();
 
         builder.HasIndex(ci => ci.Name);
+
+        builder.Property(x => x.UnitsOnOrder)
+            .HasColumnType("int2");
     }
 }
